@@ -9,12 +9,6 @@ variable "always_on" {
   type        = bool
 }
 
-variable "network_rules_ip_rules" {
-  description = "List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in RFC 1918) are not allowed. Defaults to null"
-  type        = list(string)
-  default     = []
-}
-
 variable "kind" {
   description = "The kind of the App Service Plan to create. Possible values are Windows (also available as App), Linux, elastic (for Premium Consumption) and FunctionApp (for a Consumption Plan). Defaults to Windows. Changing this forces a new resource to be created."
   type        = string
